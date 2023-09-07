@@ -2,6 +2,8 @@
 import { useMemorizeRequest } from '@/hook/useMemorizeRequest';
 import { getMvList } from '@/service';
 import { useThemeVars } from 'naive-ui';
+import { useMainStore } from '../../stores/main';
+
 import {
   nextTick,
   reactive, ref, toRaw, watch 
@@ -13,7 +15,7 @@ const typeList = [
   '全部', '官方版', '现场版', '原生', '网易出品'
 ];
 const orderList = ['最热', '最新', '上升最快'];
-
+const mainStore=useMainStore()
 
 const params = reactive({
   area: areaList[0],
@@ -75,7 +77,7 @@ watch([() => pageParams.page, () => pageParams.pageSize], async () => {
 </script>
 
 <template>
-  <div class="overflow-hidden p-6 musicList" :style="{background:themeVars.bodyColor}">
+  <div class="overflow-hidden p-6 musicList" :style="{background:themeVars.bodyColor}" v-show="!mainStore.showMusicDetail" >
     <n-space
       vertical class="sticky top-0 z-40 py-4" :style="{background:themeVars.bodyColor}"
       :size="20"
@@ -98,6 +100,7 @@ watch([() => pageParams.page, () => pageParams.pageSize], async () => {
       </div>
     </div>
   </div>
+  <div style="margin-top: 200px;"></div>
 </template>
 <style scoped>
 .n-layout .n-layout-scroll-container::-webkit-scrollbar-thumb{

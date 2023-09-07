@@ -86,7 +86,7 @@ fetchData();
 </script>
 
 <template>
-  <div class="sticky top-0  z-10  p-4 bg-slate-50 dark:bg-black">
+  <div v-show="!mainStore.showMusicDetail"><div class="sticky top-0  z-10  p-4 bg-slate-50 dark:bg-black" >
     <span
       v-for="item in typeList"
       :key="item.value" class="px-2 rounded-md opacity-50 transition duration-150 ease-in-out cursor-pointer"
@@ -173,6 +173,8 @@ fetchData();
       </ul>
     </transition>
   </div>
+  <div style="margin-top: 300px;"></div></div>
+  
 </template>
 
 <style scoped>

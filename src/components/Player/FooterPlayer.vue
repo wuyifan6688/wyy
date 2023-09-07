@@ -62,7 +62,7 @@ const activeStyle = computed(() => {
   if (!mainStore.showMusicDetail) {
     transformStyle = 'translateY(0)';
   } else {
-    transformStyle = 'translateY(-54px)';
+    transformStyle = 'translateY(-64px)';
   }
   return { transform: transformStyle };
 });
@@ -280,7 +280,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <div class="flex z-30 items-center p-2 footer-player">
+  <div class="flex z-30 items-center p-2 footer-player bg-white dark:bg-black " style='height: 65px;position: fixed;bottom: 0;'>
     <div v-if="isShow" class="overflow-hidden w-60 h-12">
       <div :style="activeStyle" class="open-detail-control-wrap">
         <div class="flex items-center w-40 h-full">
@@ -307,7 +307,7 @@ onUnmounted(() => {
                 @like-success="likeSuccess"
               /> 
             </p>
-            <n-ellipsis>
+            <n-ellipsis style="margin-bottom: 25px;">
               <p>{{ formateSongsAuthor(currentSong?.ar || []) }}</p>
             </n-ellipsis>
           </div>

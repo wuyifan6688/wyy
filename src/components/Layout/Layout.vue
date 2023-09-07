@@ -24,7 +24,7 @@ onMounted(() => {
 <template>
   <div
     id="layout-container"
-    style="width: 85vw;margin: auto;"
+    style="width: 85vw;margin: auto;overflow: hidden;height: 100vh;"
   >
     <n-layout>
       <base-header />

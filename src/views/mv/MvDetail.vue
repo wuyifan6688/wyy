@@ -168,7 +168,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="py-10">
+  <div class="py-10" style="height:200vh">
     <div class="flex justify-between">
       <div class="flex-1">
         <div class="flex items-center mb-5 cursor-pointer" @click="router.push('/latestMv')">

@@ -213,6 +213,7 @@ const handleArrowClick = (type: 'next' | 'prev') => {
       v-else
       :list="MVList"
     />
+    <div style="margin-top: 460px;"></div>
   </div>
 </template>
 

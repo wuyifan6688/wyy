@@ -5,6 +5,8 @@ import { getArrLast } from '@/utils';
 import { useAsyncState } from '@vueuse/core';
 import { useLoadingBar, useThemeVars } from 'naive-ui';
 import { computed, nextTick, onBeforeMount, ref, watch } from 'vue';
+import { useMainStore } from '@/stores/main';
+const mainStore = useMainStore();
 //精品歌单
 const tabsTabSelector = '.myTabs > .n-tabs-nav .n-tabs-wrapper > .n-tabs-tab-wrapper>.n-tabs-tab';
 const {
@@ -112,7 +114,7 @@ const loadMore = (successCallback: any) => {
 </script>
 
 <template>
-  <div class="px-6">
+  <div class="px-6" v-show="!mainStore.showMusicDetail">
     <div v-if="!currentSongList.list[0]" class="relative">
       <div class="flex p-4">
         <n-skeleton class="w-36 h-36 rounded-xl" />
@@ -177,6 +179,7 @@ const loadMore = (successCallback: any) => {
       </div>
     </div>
   </div>
+  <div style="margin-top:300px"></div>
 </template>
 
 <style scoped>

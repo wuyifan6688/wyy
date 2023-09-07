@@ -49,7 +49,7 @@ export default defineComponent({
       {
         title: '操作',
         key: 'row',
-        width: 50,
+        width: 70,
         render (row, index) {
           let songList = (props.rawSongList.length
             ? props.rawSongList

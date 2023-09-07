@@ -242,7 +242,7 @@ watch(pageParams, () => {
         </transition>
       </div>
       <div ref="scrollContainerRef" class="flex px-10 pt-5 detail-content" @scroll="handleScroll">
-        <rotate-cd />
+        <rotate-cd style=" transform: scale(0.7);margin-right: 180px;" />
         <div class="ml-10">
           <div style="width:550px">
             <div class="relative">
@@ -306,7 +306,7 @@ watch(pageParams, () => {
                 <div class="h-20" />
               </div>
             </div>
-            <n-scrollbar style="max-height: 350px;padding-right:20px;" class="pt-10 ml-20">
+            <n-scrollbar style="max-height: 350px;padding-right:20px;margin-left: -20px;" class="pt-10 ml-20">
               <h3 v-if="similarPlaylist.length" class="m-0 text-left">
                 包含这首歌的歌单
               </h3>
@@ -425,8 +425,9 @@ watch(pageParams, () => {
   bottom: 73px;
   width: 85vw;
   height: calc(100vh - 73px);
-  z-index: 1000;
+  z-index: 3000;
   overflow: hidden;
+  /* overflow-x: hidden; */
 }
 .detail-content{
   height: calc(100vh - 73px - 77px);
