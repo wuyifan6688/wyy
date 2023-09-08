@@ -57,7 +57,7 @@ const handleArrowClick = (type: 'next' | 'prev') => {
 </script>
 
 <template>
-  <div class="p-6">
+  <div class="p-6" v-show="!mainStore.showMusicDetail">
     <div
       v-if="isLoading"
       class="flex items-center"
