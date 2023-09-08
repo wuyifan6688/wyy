@@ -101,7 +101,7 @@ const handleScroll = (event:Event) => {
   triggerScroll = true;
   let { scrollTop } = target;
   let current = eleScrollTopMap.get(Math.round(scrollTop));
-  console.log(eleScrollTopMap,scrollTop,current)
+  // console.log(eleScrollTopMap,scrollTop,current)
   if (!selectLyricLine.value) {
     selectLyricLine.value = current;
   } else {

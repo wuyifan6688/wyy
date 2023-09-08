@@ -21,7 +21,7 @@ import obverser from '@/utils/obverser';
 import type { HeartIconExpose } from '../common/HeartIcon.vue';
 import { useAudioLoadProgress } from './hook/useAudioLoadProgress';
 import sliderBar from '../../components/Base/SliderBar.vue'
-
+import { nanoid } from 'nanoid';
 let slideValueChange = false;// 记录slider值是否手动发生了改变
 let triggerOriginalAudioTimeUpdate = true;
 const progressWidth = 500;
@@ -68,6 +68,9 @@ const activeStyle = computed(() => {
 });
 const loadCurrentPrevAndNext = async (val:any) => {
   // 加载上一首和下一首的歌曲url
+  if (!val) return;
+
+  console.log(val)
   let next = mainStore.playList[val.nextIndex];
   let prev = mainStore.playList[val.prevIndex];
   if (!next.url) {
@@ -78,8 +81,14 @@ const loadCurrentPrevAndNext = async (val:any) => {
   }
   localStorage.playList = JSON.stringify(mainStore.playList);
 };
+
+
+mainStore.initPlayList([],0,nanoid());
+
+
 watch(
   () => mainStore.currentPlaySong, (val, oldVal) => {
+    console.log('kk',oldVal)
     loadCurrentPrevAndNext(val);
     if (oldVal && val.id !== oldVal.id) {
       // 重新加载媒体资源

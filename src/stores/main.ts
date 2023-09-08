@@ -101,7 +101,115 @@ export const useMainStore = defineStore({
       data:any[], index=0, playListId:string, message='亲爱的, 暂无版权'
     ) {
       // 如果没有获取url, 则获取歌曲url
-      if (!data[index].url) {
+      console.log('data',data)
+      let g=1
+      if(data.length==0)
+      {
+        g=0,
+        data=[{
+        "name": "Young Again (Radio Edit)",
+        "id": 29554109,
+        "pst": 0,
+        "t": 0,
+        "ar": [
+            {
+                "id": 34994,
+                "name": "Hardwell",
+                "tns": [],
+                "alias": []
+            },
+            {
+                "id": 52331,
+                "name": "Chris Jones",
+                "tns": [],
+                "alias": []
+            }
+        ],
+        "alia": [],
+        "pop": 95,
+        "st": 0,
+        "rt": "",
+        "fee": 8,
+        "v": 47,
+        "crbt": null,
+        "cf": "",
+        "al": {
+            "id": 3046048,
+            "name": "Young Again",
+            "picUrl": "https://p2.music.126.net/1XNXI-PlmlIQAWSV8MCFxg==/109951163375899858.jpg",
+            "tns": [],
+            "pic_str": "109951163375899858",
+            "pic": 109951163375899860
+        },
+        "dt": 219631,
+        "h": {
+            "br": 320000,
+            "fid": 0,
+            "size": 8787636,
+            "vd": -77105,
+            "sr": 44100
+        },
+        "m": {
+            "br": 192000,
+            "fid": 0,
+            "size": 5272599,
+            "vd": -74557,
+            "sr": 44100
+        },
+        "l": {
+            "br": 128000,
+            "fid": 0,
+            "size": 3515080,
+            "vd": -72943,
+            "sr": 44100
+        },
+        "sq": {
+            "br": 1096484,
+            "fid": 0,
+            "size": 30102865,
+            "vd": -77393,
+            "sr": 44100
+        },
+        "hr": null,
+        "a": null,
+        "cd": "01",
+        "no": 2,
+        "rtUrl": null,
+        "ftype": 0,
+        "rtUrls": [],
+        "djId": 0,
+        "copyright": 2,
+        "s_id": 0,
+        "mark": 270336,
+        "originCoverType": 0,
+        "originSongSimpleData": null,
+        "tagPicList": null,
+        "resourceState": true,
+        "version": 47,
+        "songJumpInfo": null,
+        "entertainmentTags": null,
+        "awardTags": null,
+        "single": 0,
+        "noCopyrightRcmd": null,
+        "mst": 9,
+        "cp": 1369822,
+        "rtype": 0,
+        "rurl": null,
+        "mv": 353135,
+        "publishTime": 1413475200000,
+        "like": false,
+        "formatAuthor": "Hardwell / Chris Jones",
+        "key": 0,
+        "url": "http://m801.music.126.net/20230908112657/ce5f7e4823b58d72dc96438dbc98cdc3/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/24069628773/f0e9/1153/4e3b/fec4c2f24df1f169a1a7981e150e312a.flac?id=29554109",
+        "lyric": "[00:03.010]When I was a boy\n[00:04.900]I dreamed of a place in the sky\n[00:10.520]Playing in the fields\n[00:12.110]Battling with my shields\n[00:13.930]Bows made out of twine\n[00:15.340]\n[00:17.700]I wish I could see this world again\n[00:23.820]Through those eyes\n[00:25.240]See the child in me\n[00:27.100]In my fantasy\n[00:29.050]Never growing old\n[00:30.270]\n[00:33.210]Will we ever feel young again?\n[00:40.660]Will we ever feel young again?\n[00:48.030]Will we ever feel young again?\n[00:54.840]We wanna feel young\n[00:58.560]We wanna feel young again!\n[01:01.720]\n[01:47.300]When I was a boy,\n[01:48.740]I searched for a world that's unknown\n[01:54.580]All we have is fun\n[01:56.330]Everybody run until the sun goes down\n[01:59.560]\n[02:01.910]I wish I could see this world again\n[02:07.970]Through those eyes\n[02:09.450]See the child in me\n[02:11.210]In my fantasy\n[02:13.110]Never growing old\n[02:14.460]\n[02:17.360]Will we ever feel young again?\n[02:24.690]Will we ever feel young again?\n[02:32.150]Will we ever feel young again?\n[02:39.160]We wanna feel young\n[02:42.890]We wanna feel young again\n",
+        "isNotLyric": false,
+        "tlyric": "[by:刚叔]\n[00:03.010]当我还是个小男孩的时候\n[00:04.900]我梦到我身处天空中的某处\n[00:10.520]在草地上玩耍\n[00:12.110]用我的盾牌战斗\n[00:13.930]还有麻绳做成的弓箭\n[00:17.700]我期望我能再次见到这个世界\n[00:23.820]透过那些双眼\n[00:25.240]看到我心中的童真\n[00:27.100]在我的幻想中\n[00:29.050]永远不会衰老\n[00:33.210]我们会再次感到童真么？\n[00:40.660]我们会再次感到童真么？\n[00:48.030]我们会再次感到童真么？\n[00:54.840]我们想感到童真\n[00:58.560]我们想再次感到年轻时的力量！\n[01:47.300]当我还是个小男孩的时候\n[01:48.740]我寻找一个未知的世界\n[01:54.580]我们只有欢乐\n[01:56.330]所有人快乐奔跑直到太阳下山\n[02:01.910]我希望我能再次看到这个童真的世界\n[02:07.970]通过哪些眼睛\n[02:09.450]看到我心中的童真\n[02:11.210]在我的幻想中\n[02:13.110]永远不衰老\n[02:17.360]我们会再次感到童真么？\n[02:24.690]我们会再次感到童真么？\n[02:32.150]我们会再次感到童真么？\n[02:39.160]我们想感到童真\n[02:42.890]我们想再次感到年轻时的力量！\n",
+        "isLoading": false,
+        "nextIndex": 1,
+        "prevIndex": 99,
+        "primaryColor": "rgb(4,2,3)"
+    }]}
+      if (!data[index]||!data[index].url) {
         const res = await this.setMusicData({ data, id: data[index].id, index: index });
         if (!res.success) return;
       }
@@ -119,7 +227,7 @@ export const useMainStore = defineStore({
       if (this.playMode === 'random') {
         this.shufflePlayList();
       }
-      this.changePlaying(true);
+    if(g!=0)  this.changePlaying(true);
     },
     resetPlayList() {
       this.playList = [];
